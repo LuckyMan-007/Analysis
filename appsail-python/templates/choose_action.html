@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Select Action</title>
+</head>
+<body style="text-align: -webkit-center;padding: 17%;background:repeating-radial-gradient(#cce8f3, transparent 268px);">
+    <h2>Select Action</h2>
+    <form action="{{ url_for('view_records') }}" method="get">
+        <button type="submit">View Records</button>
+    </form><br>
+    <form action="{{ url_for('analysis') }}" method="get">
+        <button type="submit">Analysis</button>
+    </form>
+</body>
+</html>

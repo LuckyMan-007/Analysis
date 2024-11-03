@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>View Records</title>
+</head>
+<body style="text-align: -webkit-center;padding: 17%;background: repeating-radial-gradient(#cce8f3, transparent 268px);">
+    <h2>Filter Records</h2>
+    <form action="{{ url_for('view_records') }}" method="post">  <!-- Ensure method is POST -->
+        <label for="columns">Select Columns:</label>
+        <select name="columns" multiple required>
+            {% for col in columns %}
+                <option value="{{ col }}">{{ col }}</option>
+            {% endfor %}
+        </select><br><br>
+        
+        <label for="num_rows">Number of Rows:</label>
+        <input type="number" name="num_rows" min="1" required><br><br>
+        
+        <button type="submit">View Records</button>
+    </form>
+</body>
+</html>
